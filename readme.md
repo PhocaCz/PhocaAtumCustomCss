@@ -15,6 +15,7 @@ Always backup your files before deleting.
 
 # Support
 
-[Phoca](https://www.phoca.cz)
-[Phoca Forum](https://www.phoca.cz/forum)
-[Phoca Templates](https://www.phoca.cz/joomla-templates)
+- [Phoca Atum Custom CSS](https://www.phoca.cz/news/1339-phoca-atum-custom-css-version-5-0-0-released)
+- [Phoca](https://www.phoca.cz)
+- [Phoca Forum](https://www.phoca.cz/forum)
+- [Phoca Templates](https://www.phoca.cz/joomla-templates)
