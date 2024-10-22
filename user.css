@@ -29,7 +29,52 @@
 	--ph-color-btn-danger: #c52827;
 	--ph-color-btn-success: #457d54;
 	--ph-color-white: #fff;
+
+    --ph-color-secondary: #495057;
+    --ph-color-muted: #6c757d;
+    --ph-color-white-50: rgba(255,255,255,0.5);
+    --ph-color-black-50: rgba(0,0,0,0.5);
+
+    --ph-color-black-fixed: #000;
+    --ph-color-white-fixed: #fff;
+
+    --ph-color-item-bg: var(--ph-color-white);
+    --ph-color-item-dark-bg: var(--ph-color-white);
+    --ph-color-shadow: rgb(0 0 0 / 10%);
+    --ph-filter-input: 2px solid var(--ph-color-white-fixed);
 }
+
+[data-color-scheme="dark"]{
+    --ph-color1: #c8c5e7;
+
+    --ph-color-grey1: #4e5883;
+    --ph-color-grey2: #113247;
+    --ph-color-grey3: #f5f8fabf;
+    --ph-color-grey4: #f5f8fa80;
+    --ph-color-grey5: #f5f8fa40;
+     --ph-color-grey6: #575757;
+	 --ph-color-grey7: #90a3ac;
+    --ph-color-main: #fff;
+    --ph-bg-color: #171c24;
+	--ph-color-light: #212529;
+	--ph-color-dark: #f1faff;
+    --ph-color-white: #000;
+
+    --ph-color-item-bg: var(--ph-color-grey1);
+
+    --ph-color-shadow: rgb(255 255 255 / 10%);
+    --ph-filter-input: 1px solid var(--ph-color-white-fixed);
+
+    --card-body-bg: #3c3f40;
+    --bg-color: transparent;
+    --template-quickicon-bg: transparent;
+    --atum-list-group-bg: transparent;
+    --form-control-bg: transparent;
+    --main-card-bg: transparent;
+    --template-sidebar-bg: transparent;
+    --ph-color-item-dark-bg: trasparent;
+}
+
 
 html {
     height: 100%;
@@ -83,21 +128,21 @@ legend {
 }
 
 .text-primary {
-    color: #0184ff !important;
+    color: var(--ph-color-info) !important;
 }
 
 a.text-primary:hover,
 a.text-primary:focus {
-    color: var(--ph-color-info) !important;
+    filter: brightness(85%) !important;
 }
 
 .text-secondary {
-    color: #495057 !important;
+    color: var(--ph-color-secondary) !important;
 }
 
 a.text-secondary:hover,
 a.text-secondary:focus {
-    color: #262a2d !important;
+    filter: brightness(85%) !important;
 }
 
 .text-success {
@@ -106,7 +151,7 @@ a.text-secondary:focus {
 
 a.text-success:hover,
 a.text-success:focus {
-    color: #003b27 !important;
+    filter: brightness(85%) !important;
 }
 
 .text-info {
@@ -115,7 +160,7 @@ a.text-success:focus {
 
 a.text-info:hover,
 a.text-info:focus {
-    color: var(--ph-color-info) !important;
+    filter: brightness(85%) !important;
 }
 
 .text-warning {
@@ -124,7 +169,7 @@ a.text-info:focus {
 
 a.text-warning:hover,
 a.text-warning:focus {
-    color: #b37700 !important;
+    filter: brightness(85%) !important;
 }
 
 .text-danger {
@@ -133,7 +178,7 @@ a.text-warning:focus {
 
 a.text-danger:hover,
 a.text-danger:focus {
-    color: #952407 !important;
+    filter: brightness(85%) !important;
 }
 
 .text-light {
@@ -142,16 +187,16 @@ a.text-danger:focus {
 
 a.text-light:hover,
 a.text-light:focus {
-    color: #cbd3da !important;
+    filter: brightness(85%) !important;
 }
 
 .text-dark {
-    color: #212529 !important;
+    color: var(--phoca-color-dark) !important;
 }
 
 a.text-dark:hover,
 a.text-dark:focus {
-    color: black !important;
+    filter: brightness(85%) !important;
 }
 
 .text-body {
@@ -159,15 +204,15 @@ a.text-dark:focus {
 }
 
 .text-muted {
-    color: #6c757d !important;
+    color: var(--ph-color-muted) !important;
 }
 
 .text-black-50 {
-    color: rgba(0, 0, 0, 0.5) !important;
+    color: var(--ph-color-black-50) !important;
 }
 
 .text-white-50 {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: var(--ph-color-white-50) !important;
 }
 
 .subhead {
@@ -209,8 +254,8 @@ input {
     .choices__inner,
     select,
     input {
-        border: 2px solid var(--ph-color-white) !important;
-        box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%) !important;
+        border: var(--ph-filter-input) !important;
+        box-shadow: 0 1px 1px 0 var(--ph-color-shadow) !important;
     }
 
     .choices__inner {
@@ -262,7 +307,7 @@ body.admin {
 }
 
 .sidebar-wrapper {
-    border-right: 1px solid rgb(239, 242, 245);
+    /*border-right: 1px solid rgb(239, 242, 245);*/
     background: var(--ph-bg-color);
     box-shadow: none;
 }
@@ -372,13 +417,15 @@ a,
 .header-item-icon > * {
     background-color: var(--ph-color4);
 }
+
+.com_cpanel .card,
 .content .card {
     box-shadow: none;
-    border: 1px dashed var(--ph-color-grey7);
+    border: 1px dashed var(--ph-color-grey7) !important;
 }
 
 .header-item-content {
-    background-color: var(--ph-color-white);
+    background-color: var(--ph-color-item-bg);
     color: var(--ph-color-main);
 }
 
@@ -436,6 +483,7 @@ a:hover {
 #phtopmenu .item .menu-quicktask:hover,
 #phtopmenu .item a:hover {
     background-color: var(--ph-color-main) !important;
+    color: var(--ph-color-light) !important;
 }
 
 .main-nav ul {
@@ -453,7 +501,8 @@ a:hover {
 .main-nav li .menu-dashboard > a,
 .main-nav li .menu-quicktask > a {
     background: var(--ph-color3);
-    color: var(--ph-color-white);
+    /* we cannot change to black in dark theme as Atum uses white images there */
+    color: var(--ph-color-white-fixed);
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -515,7 +564,7 @@ a:hover {
 .ph-extension-links-box,
 .ph-cpanel-info-box,
 .ph-cp-item-icon {
-    /*background: transparent !important;*/
+    background: var(--ph-color-item-dark-bg);
     border: 1px dashed var(--ph-color-grey7);
     box-shadow: none;
 }
@@ -527,7 +576,7 @@ a:hover {
 .header .logo svg,
 .header .logo img {
     width: auto;
-    background: var(--ph-color-dark);
+    background: var(--ph-color-black-fixed);
     padding: 5px;
     border-radius: 7px;
 }
