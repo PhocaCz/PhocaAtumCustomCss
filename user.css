@@ -1,0 +1,655 @@
+/* @package Custom administration template CSS
+ * @copyright Copyright (C) Jan Pavelka www.phoca.cz
+ * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ */
+
+:root {
+    --ph-color1: #48429f;
+    --ph-color2: #009ef7;
+    --ph-color3: #fea82a;
+    --ph-color4: #fe592a;
+    --ph-color-grey1: #e4e6ef;
+    --ph-color-grey2: rgba(245, 248, 250, 1);
+    --ph-color-grey3: rgba(245, 248, 250, 0.75);
+    --ph-color-grey4: rgba(245, 248, 250, 0.5);
+    --ph-color-grey5: rgba(245, 248, 250, 0.25);
+    --ph-color-grey6: rgb(216, 216, 216);
+    --ph-color-main: #3f4254;
+    --ph-bg-color: #f1f3f4;
+    --ph-bg-color-dark: var(--ph-color-main);
+    --template-bg-dark: var(--ph-bg-color-dark);
+    --template-sidebar-bg: var(--ph-bg-color-dark);
+
+    --ph-color-success: #00875a;
+    --ph-color-warning: #ffaa00;
+    --ph-color-danger: #de350b;
+    --ph-color-info: #0184ff;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: "Ubuntu", "Open Sans", "Inter", "Helvetica Neue", "Segoe UI", "SF Pro Text", "SF Pro Display", "SF UI Text", "SF UI Display", "Roboto", "Noto Sans", "Droid Sans", "Ubuntu", "Oxygen",
+        "Fira Sans", -apple-system, BlinkMacSystemFont, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--primary-text-color);
+    text-align: left;
+    background-color: var(--ph-bg-color);
+    padding: 0;
+    margin: 0;
+}
+body.monochrome {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.text-white {
+    color: var(--white) !important;
+}
+
+.text-primary {
+    color: #0184ff !important;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+    color: #005db4 !important;
+}
+
+.text-secondary {
+    color: #495057 !important;
+}
+
+a.text-secondary:hover,
+a.text-secondary:focus {
+    color: #262a2d !important;
+}
+
+.text-success {
+    color: var(--ph-color-success) !important;
+}
+
+a.text-success:hover,
+a.text-success:focus {
+    color: #003b27 !important;
+}
+
+.text-info {
+    color: #0184ff !important;
+}
+
+a.text-info:hover,
+a.text-info:focus {
+    color: var(--ph-color-info) !important;
+}
+
+.text-warning {
+    color: var(--ph-color-warning) !important;
+}
+
+a.text-warning:hover,
+a.text-warning:focus {
+    color: #b37700 !important;
+}
+
+.text-danger {
+    color: var(--ph-color-danger) !important;
+}
+
+a.text-danger:hover,
+a.text-danger:focus {
+    color: #952407 !important;
+}
+
+.text-light {
+    color: #f8f9fa !important;
+}
+
+a.text-light:hover,
+a.text-light:focus {
+    color: #cbd3da !important;
+}
+
+.text-dark {
+    color: #212529 !important;
+}
+
+a.text-dark:hover,
+a.text-dark:focus {
+    color: black !important;
+}
+
+.text-body {
+    color: var(--primary-text-color) !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.text-black-50 {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.subhead {
+    color: var(--ph-color-main);
+    background-color: var(--ph-bg-color);
+    background-image: none;
+    box-shadow: none;
+}
+
+.btn {
+    font-weight: 500;
+    color: #fff !important;
+    border-color: var(--ph-color2) !important;
+    background-color: var(--ph-color2) !important;
+    box-shadow: none;
+}
+
+.btn-danger {
+    background-color: #c52827 !important;
+    border-color: #c52827 !important;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #457d54 !important;
+    border-color: #457d54 !important;
+    color: #fff;
+}
+/*
+.choices__inner,
+select,
+input:not([type='checkbox'])  { 
+	border: 2px solid #fff !important; 
+	box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+}
+
+.choices {
+	border: 0 !important;
+	box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+}
+
+.login input,
+joomla-tab-element .choices__inner,
+joomla-tab-element .select,
+joomla-tab-element .input,
+joomla-tab-element .form-control,
+joomla-tab-element .form-select,
+.main-card .choices__inner,
+.main-card select,
+.main-card input {
+	border: 1px solid var(--ph-color-grey6) !important;
+	box-shadow: none !important;
+}
+*/
+
+.choices__inner,
+select,
+input {
+    border: 1px solid var(--ph-color-grey6) !important;
+    /*box-shadow: none !important;*/
+}
+
+.js-stools-container-filters,
+.btn-toolbar {
+    .choices__inner,
+    select,
+    input {
+        border: 2px solid #fff !important;
+        box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%) !important;
+    }
+
+    .choices__inner {
+        vertical-align: baseline;
+    }
+    .choices,
+    input.choices__input {
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+.choices {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.choices__inner {
+    /*min-height: auto;*/
+}
+.choices[data-type*="select-multiple"] .choices__input,
+.choices[data-type*="text"] .choices__input {
+    /*padding: 0;*/
+}
+
+.choices div select,
+.choices div input {
+    border: 0 !important;
+    box-shadow: none;
+}
+
+.ph-topmenu-default {
+    background-color: #fff !important; /* var(--ph-color-grey2);*/
+    border-bottom: 1px solid var(--ph-color-grey1);
+}
+
+.header .page-title {
+    color: var(--ph-color1);
+}
+
+.header,
+.header .logo,
+body.admin {
+    background: transparent !important;
+}
+
+body.admin {
+    background: var(--ph-bg-color) !important;
+}
+
+.sidebar-wrapper {
+    border-right: 1px solid rgb(239, 242, 245);
+    background: var(--ph-bg-color);
+    box-shadow: none;
+}
+
+@media (width <= 767.98px) {
+    .header-items {
+        background: var(--ph-bg-color-dark);
+    }
+}
+
+.header {
+    border-bottom: 1px solid var(--ph-color-grey1);
+}
+
+.sidebar-wrapper .item a,
+.sidebar-wrapper .item .menu-dashboard,
+.sidebar-wrapper .item .menu-quicktask {
+    color: var(--ph-color-main);
+}
+.sidebar-wrapper .item a {
+    border-left: 3px solid transparent;
+}
+
+.sidebar-wrapper .item span a,
+.sidebar-wrapper .item span a:hover {
+    border-left: 0;
+}
+
+.sidebar-wrapper .item a:hover,
+.main-nav a.mm-active {
+    color: var(--ph-color-main);
+    border-left: 3px solid var(--ph-color2);
+    /*background-color: rgba(245,248,250,.75);*/
+    background-color: var(--ph-color-grey6);
+}
+
+.sidebar-wrapper .item .menu-dashboard:hover,
+.sidebar-wrapper .item .menu-quicktask:hover {
+    background: var(--ph-color3);
+    color: #fff;
+    border-left-color: #fff;
+}
+
+.sidebar-wrapper .sidebar-toggle {
+    background: transparent;
+}
+
+.header-item-content,
+.header-item-content a,
+.header-item-content button,
+.header-item-content.joomlaversion,
+.header a,
+.nav-link,
+.nav-link:hover,
+a,
+.sidebar-wrapper .sidebar-toggle a {
+    color: var(--ph-color-main);
+}
+
+.quick-icons .quickicon-group,
+.quick-icons .quickicon-single {
+    background-color: var(--ph-color-grey2);
+    border: 1px solid transparent;
+}
+
+.com_cpanel .cpanel-add-module {
+    background-color: var(--ph-color-grey2);
+    border: 1px solid transparent;
+}
+.quick-icons .quickicon {
+    --text-color: var(--ph-color-main);
+    --ph-bg-color: var(--ph-color-grey2);
+}
+
+.quick-icons .quickicon a .quickicon-icon > * {
+    color: #f1faff;
+    color: var(--ph-color1);
+    /*opacity: 0.5;*/
+}
+
+.quick-icons .quickicon-linkadd {
+    background: var(--ph-color3);
+    color: #fff;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5em;
+}
+
+.quick-icons .quickicon-linkadd a > * {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.quickicon-group ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-item-icon > * {
+    background-color: var(--ph-color4);
+}
+.content .card {
+    box-shadow: none;
+    border: 1px dashed #cbd4d8;
+}
+
+.header-item-content {
+    background-color: #fff;
+    color: var(--ph-color-main);
+}
+
+.com_cpanel .module-actions > * {
+    padding: revert;
+}
+
+.quick-icons .quickicon a.success {
+    background-color: var(--ph-color-grey2);
+    border: 3px solid #55a258;
+}
+
+.quick-icons .quickicon a.danger {
+    background-color: var(--ph-color-grey2);
+    border: 3px solid #c52827;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: #cbd4d8;
+    border-color: transparent;
+}
+/*
+tr {
+
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	/*border-bottom: 1px dashed #cbd4d8;*/ /*
+}
+
+tr td:first-child { border-top-left-radius: 5px; }
+tr td:last-child { border-top-right-radius: 5px; }
+
+tr td:first-child { border-bottom-left-radius: 5px; }
+tr td:last-child { border-bottom-right-radius: 5px; }
+  */
+.table {
+    box-shadow: var(--atum-box-shadow);
+    border-radius: 5px;
+}
+
+a:hover {
+    color: var(--ph-color-main);
+}
+
+.table thead a {
+    color: var(--ph-color1);
+}
+
+.quick-icons .quickicon a:active,
+.quick-icons .quickicon a:focus,
+.quick-icons .quickicon a:hover {
+    background: transparent;
+    color: var(--ph-color-main);
+    text-decoration: none;
+}
+
+.quick-icons .quickicon-linkadd a:active,
+.quick-icons .quickicon-linkadd a:focus,
+.quick-icons .quickicon-linkadd a:hover {
+    background: transparent;
+}
+
+#phtopmenu .item .menu-dashboard:hover,
+#phtopmenu .item .menu-quicktask:hover,
+#phtopmenu .item a:hover {
+    background-color: var(--ph-color-main) !important;
+}
+
+.main-nav ul {
+    background: transparent;
+}
+
+.main-nav .divider {
+    background-color: var(--ph-color-grey2);
+}
+
+.main-nav a.mm-active + .menu-quicktask {
+    background: transparent;
+}
+
+.main-nav li .menu-dashboard > a,
+.main-nav li .menu-quicktask > a {
+    background: var(--ph-color3);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--ph-bg-color);
+    border-radius: 7px;
+}
+
+.main-nav li .menu-dashboard > a:hover,
+.main-nav li .menu-quicktask > a:hover {
+    background: var(--ph-color4);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--ph-bg-color);
+    border-radius: 7px;
+}
+
+.header-item-content:not(.no-link):not(.joomlaversion):hover {
+    background-color: var(--ph-color-grey2);
+}
+
+.page-item.active .page-link {
+    background-color: var(--ph-color1);
+    border-color: var(--ph-color1);
+}
+
+.page-link {
+    color: var(--ph-color1);
+}
+
+.js-stools-container-bar .btn-toolbar .js-stools-btn-clear {
+    border: 1px solid var(--ph-color2);
+}
+
+.table {
+    --table-bg: var(--white);
+    --table-accent-bg: transparent;
+    --table-striped-color: #212529;
+    --table-striped-bg: var(--ph-color-grey2);
+    --table-active-color: #212529;
+    --table-active-bg: var(--ph-color-grey2);
+    --table-hover-color: #212529;
+    --table-hover-bg: var(--ph-color-grey2);
+    border-color: #dee2e6;
+    color: #212529;
+    margin-bottom: 1rem;
+    vertical-align: top;
+    width: 100%;
+}
+
+.subhead .btn > span {
+    color: #fff;
+}
+
+.ph-extension-info-box,
+.ph-extension-links-box,
+.ph-cpanel-info-box,
+.ph-cp-item-icon {
+    /*background: transparent !important;*/
+    border: 1px dashed #cbd4d8;
+    box-shadow: none;
+}
+
+.ph-cpanel-chart-box {
+    /* box-shadow: 0 3px 8px 0 rgb(60 70 100 / 10%), 0 3px 6px 0 rgb(0 0 0 / 10%);
+    background: #999 !important;
+	color: var(--ph-color-main) !important;*/
+}
+.ph-cpanel-color-header-block {
+    /*color: var(--ph-color-main) !important;*/
+}
+
+.nav a.ph-submenu.ph-submenu-back:before {
+    color: #212529;
+}
+
+.header .logo svg,
+.header .logo img {
+    width: auto;
+    background: #212529;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+#system-message-container joomla-alert[type="success"] {
+    color: #fff;
+    background-color: var(--ph-color-success);
+    border-color: var(--ph-color-success);
+}
+
+#system-message-container joomla-alert[type="success"] .alert-heading {
+    background-color: var(--ph-color-success);
+}
+
+#system-message-container joomla-alert[type="warning"] {
+    color: #000;
+    background-color: var(--ph-color-warning);
+    border-color: var(--ph-color-warning);
+}
+
+#system-message-container joomla-alert[type="warning"] .alert-heading {
+    background-color: var(--ph-color-warning);
+}
+
+#system-message-container joomla-alert[type="danger"] {
+    color: #fff;
+    background-color: var(--ph-color-danger);
+    border-color: var(--ph-color-danger);
+}
+
+#system-message-container joomla-alert[type="danger"] .alert-heading {
+    background-color: var(--ph-color-danger);
+}
+
+#system-message-container joomla-alert[type="info"] {
+    color: #fff;
+    background-color: var(--ph-color-info);
+    border-color: var(--ph-color-info);
+}
+
+#system-message-container joomla-alert[type="info"] .alert-heading {
+    background-color: var(--ph-color-info);
+}
+
+#system-message-container joomla-alert .joomla-alert--close,
+#system-message-container joomla-alert .joomla-alert-button--close {
+    color: #fff;
+    font-weight: 100;
+}
+
+.js-stools-container-filters-visible {
+    background: transparent;
+}
+
+.header .dropdown-header {
+    background-color: #fff;
+}
+
+.header .dropdown-header,
+.header .dropdown-item {
+    color: var(--ph-color-main);
+    background-color: #fff;
+}
+.dropdown-header {
+    color: var(--ph-color-grey1);
+}
+
+.header .dropdown-header:hover,
+.header .dropdown-item:hover {
+    background-color: var(--ph-color-grey6);
+    color: var(--ph-color-main);
+}
+
+#ph-desktop {
+    border-radius: 5px;
+}
