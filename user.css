@@ -2,7 +2,6 @@
  * @copyright Copyright (C) Jan Pavelka www.phoca.cz
  * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
  */
-
 :root {
     --ph-color1: #48429f;
     --ph-color2: #009ef7;
@@ -46,7 +45,6 @@
 
 [data-color-scheme="dark"]{
     --ph-color1: #c8c5e7;
-
     --ph-color-grey1: #4e5883;
     --ph-color-grey2: #113247;
     --ph-color-grey3: #f5f8fabf;
@@ -59,12 +57,9 @@
 	--ph-color-light: #212529;
 	--ph-color-dark: #f1faff;
     --ph-color-white: #000;
-
     --ph-color-item-bg: var(--ph-color-grey1);
-
     --ph-color-shadow: rgb(255 255 255 / 10%);
     --ph-filter-input: 1px solid var(--ph-color-white-fixed);
-
     --card-body-bg: #3c3f40;
     --bg-color: transparent;
     --template-quickicon-bg: transparent;
